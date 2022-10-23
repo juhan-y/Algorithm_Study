@@ -10,6 +10,5 @@ while True :
         count+=1
     else :
         n -= 1
-        count+=1    
-         
+        count+=1       
 print(count)
