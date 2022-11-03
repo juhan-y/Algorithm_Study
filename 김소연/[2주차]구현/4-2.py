@@ -3,19 +3,30 @@ import sys
 n, m = map(int, input().split())
 x, y, d = map(int, input().split())
 
-# 반시계 :북서남동
-dir = [0, 3, 2, 1] 
-dx = [0, -1, 0, 1]
-dy = [-1, 0, 1, 0]
+dir = [0, 1, 2, 3] 
+# 북 동 남 서
+dx = [-1, 0, 1, 0]
+dy = [0, 1, 0, -1]
+
 
 gmap = []
 cnt = 1
 for i in range(n):
     gmap.append(list(map(int, input().split())))
 
-idx = dir.index(d)+1
+gmap[x][y] = 1
+
+# 반시계 방향
+idx = dir.index(d)
+    
 while(1):
-    gmap[x][y] = 1
+    
+    # 반시계 방향
+    idx -= 1
+
+    if idx == -1:
+        idx = 3
+    
     nx = x + dx[idx]
     ny = y + dy[idx]
 
@@ -24,11 +35,6 @@ while(1):
         y = ny
         gmap[nx][ny] = 1
         cnt += 1
-
-    if idx < 3:
-        idx += 1
-    else:
-        idx = 0
     
     count_n = 0
     for i in gmap:
