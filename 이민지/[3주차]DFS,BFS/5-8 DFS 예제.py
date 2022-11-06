@@ -1,3 +1,4 @@
+# DFS는 깊이우선탐색으로 스택을 사용한다
 # DFS 메서드 정의
 def dfs(graph, v, visited):
     # 현재 노드를 방문 처리
