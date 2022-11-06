@@ -1,6 +1,4 @@
 # dfs 풀이법
-from collections import deque
-
 n, m = map(int, input().split())
 graph = []
 for i in range(n):
