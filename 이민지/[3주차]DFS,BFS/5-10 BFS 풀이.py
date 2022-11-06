@@ -1,4 +1,3 @@
-# bfs 풀이법
 from collections import deque
 
 dx = [-1, 1, 0, 0]
@@ -6,7 +5,7 @@ dy = [0, 0, -1, 1]
 count = 0
 
 def bfs(x, y):
-    queue = deque(())
+    queue = deque()
     queue.append((x, y))
 
     if graph[x][y] == 1:
