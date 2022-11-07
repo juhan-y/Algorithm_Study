@@ -1,4 +1,3 @@
-# dfs 풀이법
 n, m = map(int, input().split())
 graph = []
 for i in range(n):
