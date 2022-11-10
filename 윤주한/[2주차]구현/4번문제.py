@@ -4,14 +4,15 @@ i, j, k = map(int, input().split())
 graph = []
 for _ in range(n):
     graph.append(list(map(int, input().split())))
-
+     #북 동 남 서
 di = [-1, 0, 1, 0]
 dj = [0, 1, 0, -1]
-
+ 
 visited = copy.deepcopy(graph)
 
 ans = 1
 cnt = 0
+prev = k
 while True:
     k -= 1
     if k < 0:
