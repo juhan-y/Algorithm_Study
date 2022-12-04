@@ -10,8 +10,8 @@ for i in range(N) :
 def dfs(x,y) :
     if x<=-1 or x>=N or y<=-1 or y>=M :
         return False
-    if arr[x][y] == 1:
-        arr[x][y] == 0
+    if arr[x][y] == 0:
+        arr[x][y] == 1
 
         dfs(x-1,y)
         dfs(x,y-1)
