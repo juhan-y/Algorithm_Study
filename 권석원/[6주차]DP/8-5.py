@@ -1,21 +1,23 @@
 import sys
 
 n = int(sys.stdin.readline())
-lst = list(map(int,sys.stdin.readline().split()))
 
-ans = []
-
-for i in range(n//2):
-    tmp = 0
-    jump = True
-    for j in range(i,n):
-        if jump:
-            tmp += lst[j]
-            jump = False
-        else:
-            jump = True
+def func(k,cnt,ans = []):
     
-    ans.append(tmp)
-
-print(max(ans))
+    a,b,c,d = 9999999,9999999,9999999,9999999
     
+    if k == 1:
+        return cnt
+    
+    if k % 5 == 0:
+        a = func(k//5,cnt+1)
+    if k % 3 == 0:
+        b = func(k//3,cnt+1)
+    if k % 2 == 0:
+        c = func(k//2,cnt+1)
+    if k - 1 >= 1:
+        d = func(k-1,cnt+1)
+
+    return min(a,b,c,d)
+
+print(func(n,0))
