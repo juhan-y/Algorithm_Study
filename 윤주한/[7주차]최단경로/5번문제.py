@@ -8,9 +8,8 @@ distance = [INF] * (n+1)
 graph = [[] for _ in range(n+1)]
 
 for _ in range(m):
-    a, b, c = map(int, input().split())
-    graph[a].append((c, b))
-    graph[b].append((c, a))
+    x, y, z = map(int, input().split())
+    graph[x].append((z, y))
 
 def djikstra(start):
     distance[start] = 0
@@ -28,4 +27,4 @@ def djikstra(start):
 djikstra(c)
 
 ans = [i for i in distance if i < INF]
-print(len(ans), max(ans))
+print(len(ans) - 1, max(ans))
