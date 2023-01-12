@@ -7,5 +7,4 @@ for _ in range(n):
   floor = c % a
   if floor == 0:
     floor = a
-  w = str(floor*100 + cnt)
-  print(w)
+  print(floor*100 + cnt)
