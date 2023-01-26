@@ -13,6 +13,7 @@ while len(ans) != n:
     break
   while len(ls) < k:
     ls += ls
+
 print('<', end='')
 for i in range(n):
   if i != n-1:
