@@ -7,12 +7,11 @@ for i in range(N):
     for j in T:
         if j=='(':
             stack.append(j)
-        elif j==')':
+        if j==')':
             if stack:
                 stack.pop()
             else:
                 stack.append(j)
-                break
             
     if len(stack) == 0:
         print('YES')
