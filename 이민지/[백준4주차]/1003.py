@@ -7,4 +7,4 @@ for v in range(2,41):
     d[v][1] += (d[v-1][1]+d[v-2][1])
 for _ in range(T):
     n = int(input())
-    print("{} {}".format(d[n][0], d[n][1]))
+    print(d[n][0], d[n][1])
