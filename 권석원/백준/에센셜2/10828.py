@@ -22,6 +22,6 @@ for _ in range(N):
                 print(1)
         elif line[0] == 'pop':
             if stack:
-                stack.pop()
+                print(stack.pop())
             else:
                 print(-1)
