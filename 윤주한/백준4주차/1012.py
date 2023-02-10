@@ -4,7 +4,7 @@ t = int(input())
 dx = [1,0,-1,0]
 dy = [0,1,0,-1]
 
-def bfs(graph, visited, i, j, n, m):
+def bfs(i, j, n, m):
     q = deque()
     q.append((i, j))
     visited[i][j] = True
@@ -32,7 +32,8 @@ for _ in range(t):
     for i in range(n):
         for j in range(m):
             if not visited[i][j] and graph[i][j] == 1:
-                bfs(graph, visited, i, j, n, m)
+                bfs(i, j, n, m)
+                print(visited)
                 ans += 1
     
     print(ans)
