@@ -1,4 +1,4 @@
-# 분할 정복 시간초과
+# 분할정복
 import sys
 input = sys.stdin.readline
 def P(C,n):
