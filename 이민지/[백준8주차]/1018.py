@@ -20,4 +20,3 @@ for i in range(n-7):
                         q += 1
         cnt.append(min(p,q))
 print(min(cnt))
-

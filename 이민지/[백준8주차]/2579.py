@@ -14,3 +14,7 @@ if n>=3:
     for i in range(3,n):
         ans[i] = max(l[i-1]+ans[i-3], ans[i-2]) + l[i]
     print(ans[n-1])
+
+n번째 n-1번째 n-3번째 l[i-1]+ans[i-3] + l[i]
+      n-2번째        ans[i-2] + l[i]
+
